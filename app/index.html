@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NameLength</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="NameLength">
+    <h1>Name Length:</h1>
+    <!--D:\AngularCourse>browser-sync start --server "app" --files "**/*"-->
+    <div ng-controller="NameLengthController">
+        <div>
+            Your name <input type="text" ng-model="name" ng-keyup="displayNumeric();">
+        </div>
+<div>
+    Total length of the name:{{totalLength}}
+</div>
+    </div>
+    <script id="__bs_script__">//<![CDATA[
+        (function() {
+          try {
+            var script = document.createElement('script');
+            if ('async') {
+              script.async = true;
+            }
+            script.src = 'http://HOST:3000/browser-sync/browser-sync-client.js?v=3.0.2'.replace("HOST", location.hostname);
+            if (document.body) {
+              document.body.appendChild(script);
+            } else if (document.head) {
+              document.head.appendChild(script);
+            }
+          } catch (e) {
+            console.error("Browsersync: could not append script tag", e);
+          }
+        })()
+      //]]></script>
+</body>
+</html>
